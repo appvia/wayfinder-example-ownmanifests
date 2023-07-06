@@ -1,0 +1,35 @@
+apiVersion: app.appvia.io/v2beta1
+kind: Application
+metadata:
+  name: onlineboutique
+spec:
+  key: obtq # Unique Key for an Application inside a workspace - 9 character limit
+  name: onlineboutique # Name of the Application, visible in CLI and UI
+  cloud: aws
+  components:
+  - name: adservice
+    type: OwnManifests
+  - name: cartservice
+    type: OwnManifests
+  - name: checkoutservice
+    type: OwnManifests
+  - name: currencyservice
+    type: OwnManifests
+  - name: emailservice
+    type: OwnManifests
+  - name: frontend
+    type: OwnManifests
+  - name: loadgenerator
+    type: OwnManifests
+  - name: opentelemetrycollector
+    type: OwnManifests
+  - name: paymentservice
+    type: OwnManifests
+  - name: productcatalogservice
+    type: OwnManifests
+  - name: recommendationservice
+    type: OwnManifests
+  - name: redis-cart
+    type: OwnManifests
+  - name: shippingservice
+    type: OwnManifests

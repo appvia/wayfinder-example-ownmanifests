@@ -1,0 +1,17 @@
+appName: onlineboutique
+
+networkPolicies:
+  create: true
+  createDenyAll: false
+
+serviceAccounts:
+  create: true
+
+frontend:
+  ingress:
+    create: true
+    name: frontend
+    host: <env>.obtq.<domain>
+    clusterIssuer: wayfinder-managed
+    className: external
+    namespace: ingress

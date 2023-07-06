@@ -1,0 +1,16 @@
+apiVersion: app.appvia.io/v2beta1
+kind: AppEnv
+metadata:
+  name: onlineboutique-dev
+spec:
+  application: onlineboutique
+  cloud: aws
+  clusterRef:
+    group: compute.appvia.io
+    kind: Cluster
+    name: eks-6gwxs
+    namespace: ws-myws
+    version: v2beta1
+  name: dev
+  namespace: onlineboutique-dev # Optional, request a specific namespace name or leave omitted to auto-generate
+  stage: nonprod
